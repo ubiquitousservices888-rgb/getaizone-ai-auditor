@@ -13,6 +13,7 @@ GetAIZone is a standalone, dependency-light micro-SaaS MVP for auditing AI/softw
 - No external AI API required
 - No database required for the MVP
 - No payment system is represented as live
+- GitHub Actions validation for JavaScript syntax and required product files
 
 ## Product intent
 
