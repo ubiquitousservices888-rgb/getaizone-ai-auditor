@@ -143,7 +143,7 @@
     const overall = clamp((cost + securityHealth + governance + automationMaturityHealth) / 4);
 
     const savings = estimateSavings(data.monthlySpend, overlaps.length, data.tools.length, spendAboveHeuristic);
-    const sortedFindings = findings.sort((a, b) => ({ high: 0, medium: 1, low: 2 }[a.severity] - ({ high: 0, medium: 1, low: 2 }[b.severity]));
+    const sortedFindings = findings.sort((a, b) => ({ high: 0, medium: 1, low: 2 }[a.severity] - ({ high: 0, medium: 1, low: 2 }[b.severity])));
 
     return { cost, securityRisk, automationOpportunity, governance, overall, savings, findings: sortedFindings, overlaps };
   }
