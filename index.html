@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="GetAIZone audits AI and SaaS spend, security risk, automation opportunity, and governance readiness." />
+  <title>GetAIZone | AI Spend & Risk Auditor</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="GetAIZone home">
+      <span class="brand-mark">GZ</span>
+      <span>GetAIZone</span>
+    </a>
+    <nav aria-label="Primary navigation">
+      <a href="#how">How it works</a>
+      <a href="#pricing">Pricing</a>
+      <a class="button button-small" href="#audit">Start free audit</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero section">
+      <div class="hero-copy">
+        <span class="eyebrow">AI SPEND · SECURITY · AUTOMATION · GOVERNANCE</span>
+        <h1>Find AI waste and risk before it becomes expensive.</h1>
+        <p class="hero-lead">GetAIZone gives teams a fast, transparent audit of their AI and software stack. No credentials. No black-box scoring. No paid AI API required.</p>
+        <div class="hero-actions">
+          <a class="button" href="#audit">Run a free audit</a>
+          <a class="button button-secondary" href="#sample">See what gets checked</a>
+        </div>
+        <div class="trust-row" aria-label="Product principles">
+          <span>Deterministic scoring</span>
+          <span>Privacy-conscious</span>
+          <span>Buyer-ready MVP</span>
+        </div>
+      </div>
+      <div class="hero-panel card">
+        <div class="mini-head"><span>Example audit</span><span class="status-dot">LIVE RULES</span></div>
+        <div class="score-preview">
+          <div><strong>68</strong><span>Cost efficiency</span></div>
+          <div><strong>42</strong><span>Security risk</span></div>
+          <div><strong>76</strong><span>Automation opportunity</span></div>
+          <div><strong>54</strong><span>Governance readiness</span></div>
+        </div>
+        <div class="preview-finding">
+          <span class="severity medium">Medium</span>
+          <div><strong>Overlapping AI tools detected</strong><p>Consolidation may reduce duplicate subscriptions and policy surface area.</p></div>
+        </div>
+        <div class="preview-finding">
+          <span class="severity high">High</span>
+          <div><strong>Shared secrets reported</strong><p>Move API keys into managed secret storage and rotate exposed credentials.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="how" class="section compact-section">
+      <div class="section-heading">
+        <span class="eyebrow">HOW IT WORKS</span>
+        <h2>Useful in minutes, not after a six-week consulting engagement.</h2>
+      </div>
+      <div class="three-grid">
+        <article class="card"><span class="step">01</span><h3>Describe your stack</h3><p>Enter your monthly spend, tools, controls, data exposure, and current automation maturity.</p></article>
+        <article class="card"><span class="step">02</span><h3>Run transparent rules</h3><p>GetAIZone applies explainable heuristics. Every finding tells you exactly what triggered it.</p></article>
+        <article class="card"><span class="step">03</span><h3>Prioritize action</h3><p>See cost, security, automation, and governance scores with specific next steps and estimated savings ranges.</p></article>
+      </div>
+    </section>
+
+    <section id="sample" class="section compact-section">
+      <div class="section-heading">
+        <span class="eyebrow">WHAT WE CHECK</span>
+        <h2>Four operational pressure points.</h2>
+      </div>
+      <div class="four-grid">
+        <article class="metric-card"><span>01</span><h3>Cost efficiency</h3><p>Tool overlap, spend concentration, license sprawl, and likely consolidation opportunities.</p></article>
+        <article class="metric-card"><span>02</span><h3>Security risk</h3><p>Sensitive-data access, shared secrets, weak MFA posture, uncontrolled tool installation, and vendor review gaps.</p></article>
+        <article class="metric-card"><span>03</span><h3>Automation opportunity</h3><p>Manual workflow load, fragmented tools, low integration maturity, and repeatable work that may be automated.</p></article>
+        <article class="metric-card"><span>04</span><h3>Governance readiness</h3><p>Approval controls, ownership, data policy, vendor review, and visibility into AI usage.</p></article>
+      </div>
+    </section>
+
+    <section id="audit" class="section audit-section">
+      <div class="section-heading narrow">
+        <span class="eyebrow">FREE AUDIT</span>
+        <h2>Run your AI spend & risk audit.</h2>
+        <p>Do not enter passwords, API keys, tokens, customer records, confidential prompts, or other secrets. We do not need them.</p>
+      </div>
+
+      <form id="auditForm" class="audit-form card" novalidate>
+        <div class="form-grid">
+          <label>Company size
+            <select id="companySize" required>
+              <option value="">Select</option>
+              <option value="1-10">1–10 employees</option>
+              <option value="11-50">11–50 employees</option>
+              <option value="51-200">51–200 employees</option>
+              <option value="201-1000">201–1,000 employees</option>
+              <option value="1000+">1,000+ employees</option>
+            </select>
+          </label>
+
+          <label>Industry
+            <select id="industry" required>
+              <option value="">Select</option>
+              <option>Technology / SaaS</option>
+              <option>Professional services</option>
+              <option>Financial services</option>
+              <option>Healthcare</option>
+              <option>Retail / Ecommerce</option>
+              <option>Manufacturing</option>
+              <option>Construction / Field services</option>
+              <option>Education</option>
+              <option>Other</option>
+            </select>
+          </label>
+
+          <label>Monthly AI & software spend (USD)
+            <input id="monthlySpend" type="number" min="0" step="1" placeholder="2500" required />
+          </label>
+
+          <label>Automation maturity
+            <select id="automationLevel" required>
+              <option value="">Select</option>
+              <option value="manual">Mostly manual</option>
+              <option value="basic">A few simple automations</option>
+              <option value="integrated">Several integrated workflows</option>
+              <option value="advanced">Highly automated / orchestrated</option>
+            </select>
+          </label>
+        </div>
+
+        <label>AI / SaaS tools in use
+          <textarea id="tools" rows="5" required placeholder="One per line or separated by commas, for example: ChatGPT, Claude, Gemini, Slack, Zapier, HubSpot"></textarea>
+          <small>Tool names are used only to identify broad overlap categories. Never paste credentials.</small>
+        </label>
+
+        <fieldset>
+          <legend>Security & governance controls</legend>
+          <div class="question-grid">
+            <label><span>Do any AI tools process sensitive or regulated data?</span><select id="sensitiveData"><option value="no">No / not sure</option><option value="yes">Yes</option></select></label>
+            <label><span>Can employees install or subscribe to AI tools without approval?</span><select id="freeInstall"><option value="no">No</option><option value="yes">Yes</option></select></label>
+            <label><span>Are API keys or passwords shared between people?</span><select id="sharedSecrets"><option value="no">No</option><option value="yes">Yes</option></select></label>
+            <label><span>Is MFA required on core AI/SaaS accounts?</span><select id="mfa"><option value="yes">Yes</option><option value="no">No / inconsistent</option></select></label>
+            <label><span>Do you review vendors before employees use them?</span><select id="vendorReview"><option value="yes">Yes</option><option value="no">No / informal</option></select></label>
+            <label><span>Are high-impact AI actions subject to approval?</span><select id="approvalControls"><option value="yes">Yes</option><option value="no">No / not defined</option></select></label>
+            <label><span>Is ownership assigned for AI governance?</span><select id="governanceOwner"><option value="yes">Yes</option><option value="no">No</option></select></label>
+            <label><span>Is there a written policy for AI/data use?</span><select id="dataPolicy"><option value="yes">Yes</option><option value="partial">Partial / draft</option><option value="no">No</option></select></label>
+          </div>
+        </fieldset>
+
+        <div class="form-warning"><strong>Privacy rule:</strong> describe your environment, not your secrets. GetAIZone never needs a real token, password, API key, or confidential dataset to score this audit.</div>
+        <button class="button form-submit" type="submit">Calculate my audit</button>
+        <p id="formError" class="form-error" role="alert" hidden></p>
+      </form>
+    </section>
+
+    <section id="results" class="section results-section" hidden aria-live="polite">
+      <div class="results-top">
+        <div>
+          <span class="eyebrow">AUDIT RESULTS</span>
+          <h2>Your AI operations snapshot</h2>
+          <p id="resultSummary"></p>
+        </div>
+        <div class="overall-score card"><span>Overall operations health</span><strong id="overallScore">0</strong><small>/ 100</small></div>
+      </div>
+
+      <div class="score-grid">
+        <article class="score-card"><span>Cost efficiency</span><strong id="costScore">0</strong><div class="bar"><i id="costBar"></i></div><small>Higher is better</small></article>
+        <article class="score-card"><span>Security risk</span><strong id="securityScore">0</strong><div class="bar risk"><i id="securityBar"></i></div><small>Lower is better</small></article>
+        <article class="score-card"><span>Automation opportunity</span><strong id="automationScore">0</strong><div class="bar"><i id="automationBar"></i></div><small>Higher means more opportunity</small></article>
+        <article class="score-card"><span>Governance readiness</span><strong id="governanceScore">0</strong><div class="bar"><i id="governanceBar"></i></div><small>Higher is better</small></article>
+      </div>
+
+      <div class="results-grid">
+        <section class="card">
+          <div class="card-head"><div><span class="eyebrow">PRIORITIZED FINDINGS</span><h3>What triggered attention</h3></div><span id="findingCount" class="count-pill">0 findings</span></div>
+          <div id="findingsList" class="findings-list"></div>
+        </section>
+
+        <aside class="card savings-card">
+          <span class="eyebrow">ESTIMATED CONSOLIDATION RANGE</span>
+          <h3 id="savingsRange">$0–$0 / month</h3>
+          <p id="savingsExplanation"></p>
+          <div class="assumption-box"><strong>Important:</strong> this is a rule-based planning estimate derived from the monthly spend you entered. It is not a promise or guaranteed savings figure.</div>
+        </aside>
+      </div>
+
+      <section class="card report-actions">
+        <div><span class="eyebrow">TAKE IT WITH YOU</span><h3>Save or share your audit</h3><p>Your free audit works without an email address.</p></div>
+        <div class="action-row"><button id="copyReport" class="button button-secondary" type="button">Copy summary</button><button id="downloadReport" class="button" type="button">Download report</button></div>
+      </section>
+
+      <section class="card lead-card">
+        <div><span class="eyebrow">OPTIONAL</span><h3>Interested in a detailed review?</h3><p>This MVP does not silently collect your email. You can prepare an inquiry with your audit summary and choose whether to send it.</p></div>
+        <div class="lead-controls"><input id="leadEmail" type="email" placeholder="you@company.com" aria-label="Email address" /><button id="prepareInquiry" class="button button-secondary" type="button">Prepare inquiry</button></div>
+        <p id="leadStatus" class="lead-status"></p>
+      </section>
+    </section>
+
+    <section id="pricing" class="section compact-section pricing-section">
+      <div class="section-heading"><span class="eyebrow">PRODUCT PATH</span><h2>Built to grow beyond the free audit.</h2><p>Only the free audit is implemented in this MVP. The paid offerings below are product positioning, not a claim that checkout is currently live.</p></div>
+      <div class="four-grid pricing-grid">
+        <article class="price-card featured"><span>LIVE MVP</span><h3>Free Audit</h3><strong>$0</strong><p>Instant rule-based assessment with scores, findings, and recommended actions.</p></article>
+        <article class="price-card"><span>PLANNED</span><h3>Detailed Report</h3><strong>$99–$299</strong><p>Expanded analysis, management summary, and prioritized remediation roadmap.</p></article>
+        <article class="price-card"><span>PLANNED</span><h3>Optimization Review</h3><strong>$750–$2,500</strong><p>Human review of spend, overlap, governance, and automation opportunities.</p></article>
+        <article class="price-card"><span>PLANNED</span><h3>Monitoring</h3><strong>Recurring</strong><p>Periodic stack review, policy checks, and change tracking.</p></article>
+      </div>
+    </section>
+
+    <section class="section compact-section disclosure">
+      <div class="card"><span class="eyebrow">TRANSPARENCY</span><h2>What this MVP is and is not.</h2><p>GetAIZone currently performs deterministic, browser-based rule evaluation. It does not inspect private accounts, scan company networks, verify licenses, access vendor billing systems, or guarantee cost reductions. It is an assessment and prioritization tool, not a substitute for professional legal, cybersecurity, financial, or compliance advice.</p></div>
+    </section>
+  </main>
+
+  <footer><div class="brand"><span class="brand-mark">GZ</span><span>GetAIZone</span></div><p>AI Spend & Risk Auditor · Transparent by design.</p></footer>
+
+  <script src="./app.js"></script>
+</body>
+</html>
